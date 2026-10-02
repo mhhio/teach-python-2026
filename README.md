@@ -1,6 +1,6 @@
 # pandas & Data Visualization — 6 × 2h
 
-For a learner who already knows Python basics (session 0 refreshes them). Each session folder has one `lesson.ipynb`: explanations, code, exercises with solutions, and practice. It works for live teaching and for self-study.
+For a learner who already knows Python basics (session 0 refreshes them). Each session folder has a `lesson.ipynb` (explanations, code, exercises and practice) and, for sessions 0–4, a `solutions.ipynb` with the answers. It works for live teaching and for self-study.
 
 | # | Folder | Dataset | Topics |
 |---|---|---|---|
@@ -13,7 +13,7 @@ For a learner who already knows Python basics (session 0 refreshes them). Each s
 
 ## Setup
 
-**In the browser (nothing to install):** go to <https://colab.research.google.com> and either **New notebook** to type along, or **Upload** a `lesson.ipynb`.
+**In the browser (nothing to install):** go to <https://colab.research.google.com> and either **New notebook** to type along, or **Upload** a `lesson.ipynb` (and its `solutions.ipynb`).
 
 **On your computer:**
 
@@ -21,12 +21,12 @@ For a learner who already knows Python basics (session 0 refreshes them). Each s
 uv sync
 ```
 
-Then set your editor's interpreter (e.g. PyCharm) to `.venv/bin/python` and open any `lesson.ipynb`. The project is pinned to uv-managed Python because the python.org build on macOS can lack SSL certificates, which breaks `sns.load_dataset`.
+Then set your editor's interpreter (e.g. PyCharm) to `.venv/bin/python` and open any notebook. The project is pinned to uv-managed Python because the python.org build on macOS can lack SSL certificates, which breaks `sns.load_dataset`.
 
 After editing a lesson, check that every notebook still runs from top to bottom:
 
 ```sh
-uv run jupyter execute session*/lesson.ipynb
+uv run jupyter execute session*/*.ipynb
 ```
 
 This does not change the notebooks; it only leaves the files the lessons save (`.png`, `.csv`, `.html`) in the session folders.
