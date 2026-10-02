@@ -1,0 +1,7 @@
+.venv/
+.idea/
+
+# files the lessons save when run
+session*/*.png
+session*/*.csv
+session*/*.html
